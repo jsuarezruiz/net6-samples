@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net5.0-ios;net5.0-android</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0-ios' ">
+    <RuntimeIdentifier>ios-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0-android' ">
+    <RuntimeIdentifier>android.21-x86</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1364" GeneratePathProperty="true" />
+    <ProjectReference Include="..\HelloForms\HelloForms.csproj" />
+  </ItemGroup>
+</Project>
